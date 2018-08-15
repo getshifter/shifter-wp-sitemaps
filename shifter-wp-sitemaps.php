@@ -28,7 +28,7 @@ License: GPL-2.0
  * @since  0.1.0
  */
 
-function surbma_yoast_seo_sitemap_to_robotstxt_function( $output ) {
+function yoast_seo_sitemap_to_robotstxt_function( $output ) {
   
   $options = get_option( 'wpseo_xml' );
   
@@ -40,4 +40,4 @@ function surbma_yoast_seo_sitemap_to_robotstxt_function( $output ) {
   return $output;
 }
 
-add_filter( 'robots_txt', 'surbma_yoast_seo_sitemap_to_robotstxt_function', 9999, 1 );
+add_filter( 'robots_txt', 'yoast_seo_sitemap_to_robotstxt_function', 9999, 1 );
