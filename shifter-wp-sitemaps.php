@@ -10,17 +10,6 @@ License: GPL-2.0
 */
 
 /**
- * It's a Trap
- * -----------
- * Abort if called directly or by a script
- *
- * @since  0.1.0
- */
-
- if ( ! defined( ‘ABSPATH’ ) )
-  exit;
-
-/**
  * Yoast SEO
  * ---------
  * Add path for Yoast SEO sitemap_index.xml to WordPress Robots.txt
