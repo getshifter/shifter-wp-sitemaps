@@ -17,16 +17,21 @@ License: GPL-2.0
  * @since  0.1.0
  */
 
-function yoast_seo_sitemap_to_robotstxt_function( $output ) {
-  
-  $options = get_option( 'wpseo_xml' );
-  
-  if ( class_exists( 'WPSEO_Sitemaps' ) && $options['enablexmlsitemap'] == true ) {
-		$homeURL = get_home_url();
-    $output .= "Sitemap: $homeURL/sitemap_index.xml\n";
-	}
-  
-  return $output;
-}
+class Shifter_WP_Sitemaps {
 
-add_filter( 'robots_txt', 'yoast_seo_sitemap_to_robotstxt_function', 9999, 1 );
+  private function shifter_wp_sitemaps_yoast( $output ) {
+
+    $options = get_option( 'wpseo_xml' );
+    
+    if ( class_exists( 'WPSEO_Sitemaps' ) && $options['enablexmlsitemap'] == true ) {
+      $homeURL = get_home_url();
+      $output .= "Sitemap: $homeURL/sitemap_index.xml\n";
+    }
+    
+    return $output;
+
+    add_filter( 'robots_txt', 'shifter_wp_sitemaps_yoast', 9999, 1 );
+
+  }
+
+}
