@@ -34,4 +34,4 @@ class Shifter_WP_Sitemaps {
 
 }
 
-add_filter( 'robots_txt', array(Shifter_WP_Sitemaps, 'shifter_wp_sitemaps_yoast', 9999, 1 ));
+add_filter( 'robots_txt', 'shifter_wp_sitemaps_yoast', 9999, 1 );
