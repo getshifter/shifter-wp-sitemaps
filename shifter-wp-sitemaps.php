@@ -19,7 +19,7 @@ License: GPL-2.0
 
 class Shifter_WP_Sitemaps {
 
-  private function shifter_wp_sitemaps_yoast( $output ) {
+  public function shifter_wp_sitemaps_yoast( $output ) {
 
     $options = get_option( 'wpseo_xml' );
     
