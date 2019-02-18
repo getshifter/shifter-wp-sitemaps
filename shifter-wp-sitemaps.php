@@ -18,7 +18,10 @@ License: GPL-2.0
  * @since  0.1.0
  */
 
-function shifter_wp_sitemaps_yoast( $output ) {
+function shifter_wp_sitemaps_yoast( $output )
+
+
+{
 	$options = get_option( 'wpseo_xml' );
 
 	if ( class_exists( 'WPSEO_Sitemaps' ) && $options['enablexmlsitemap'] == true ) {
